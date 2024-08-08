@@ -7,7 +7,7 @@ This project is a Streamlit application that serves as a medical assistant chatb
 
 ## Project Structure
 
-```
+```bash
 /your-project
 ├── .env
 ├── Dockerfile
@@ -34,7 +34,7 @@ This project is a Streamlit application that serves as a medical assistant chatb
 
 1. Install the required packages:
 
-    ```
+    ```bash
     pip install -r requirements.txt
     ```
 
@@ -42,7 +42,7 @@ This project is a Streamlit application that serves as a medical assistant chatb
 
 Create a `.env` file in the root directory of your project with the following content:
 
-```
+```bash
 OPENAI_API_KEY=your-openai-api-key
 ```
 
@@ -52,7 +52,7 @@ Replace `your-openai-api-key` with your actual OpenAI API key.
 
 Run the Streamlit application:
 
-```
+```bash
 streamlit run main.py
 ```
 
@@ -62,13 +62,13 @@ To containerize the application, you can use Docker.
 
 1. Build the Docker image:
 
-    ```
+    ```bash
     docker build -t streamlit-chatbot .
     ```
 
 2. Run the Docker container:
 
-    ```
+    ```bash
     docker run -p 8501:8501 streamlit-chatbot
     ```
 
