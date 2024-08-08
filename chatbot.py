@@ -15,6 +15,16 @@ openai_client = OpenAI(
 
 
 def get_bot_response(message : str,previous_messages : list):
+    """
+    This function generates a response from a medical assistant chatbot based on a given user message and previous conversation history.
+
+    Parameters:
+    message (str): The user's message for which the chatbot needs to provide a response.
+    previous_messages (list): A list of previous messages in the conversation.
+
+    Returns:
+    str: The chatbot's response to the user's message.
+    """
     try:
 
         messages = []
@@ -46,17 +56,4 @@ Previous message history: {previous_messages_string}"""
         logger.exception(error_message)
 
 
-# previous_messages = [] 
-# while True : 
-#     message = input("Enter your message: ")
-#     previous_messages.append(f"User : {message}\n")
-#     if message == "exit":
-#         break
-#     else:
 
-        
-#         bot_response = get_bot_response(message = message,previous_messages = previous_messages)
-#         print(bot_response)
-#         previous_messages.append(f"Assistant :{bot_response}\n")
-
-#     print("\n".join(previous_messages))
